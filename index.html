@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>柔術 技ノート</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="inner">
+      <h1><a href="index.html">🥋 柔術 技ノート</a></h1>
+      <div class="profile-chip" id="profile"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="filters">
+      <select id="filter-position"><option value="">すべてのポジション</option></select>
+      <select id="filter-type"><option value="">すべての種別</option></select>
+      <select id="filter-mastery">
+        <option value="">すべての習得状況</option>
+        <option value="new">未学習</option>
+        <option value="learning">学習中</option>
+        <option value="mastered">習得</option>
+        <option value="review">復習が必要</option>
+      </select>
+      <input type="search" id="search" placeholder="技名で検索…">
+      <span class="count" id="count"></span>
+    </div>
+
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>該当する技がありません。</p>
+  </main>
+
+  <footer class="site">
+    技データは <code>data/techniques.json</code> に追記して増やせます。学習進捗はこのブラウザ内に保存されます。
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
