@@ -39,15 +39,14 @@ function detail(t, opponentTypes) {
       <div class="en">${t.nameEn ?? ""}</div>
       <div class="route-badges">
         <span class="pos">${t.from}</span>
-        <span class="arrow">→</span>
-        <span class="pos">${t.to}</span>
+        ${t.to ? `<span class="arrow">→</span><span class="pos">${t.to}</span>` : ""}
         <span class="tag">${t.type}</span>
         <span class="tag">${t.belt}帯</span>
       </div>
     </div>
 
     <section class="block">
-      <h3>手順イラスト</h3>
+      <h3>${t.type === "ガード" ? "ポジション図" : "手順イラスト"}</h3>
       <div class="gallery">
         ${t.images
           .map(
@@ -62,7 +61,7 @@ function detail(t, opponentTypes) {
     </section>
 
     <section class="block">
-      <h3>手順</h3>
+      <h3>${t.type === "ガード" ? "セットアップ／キープのポイント" : "手順"}</h3>
       <ol class="steps">${t.steps.map((s) => `<li>${s}</li>`).join("")}</ol>
     </section>
 

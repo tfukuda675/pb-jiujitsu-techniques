@@ -86,7 +86,7 @@ function card(t) {
       <div class="body">
         <div class="name">${t.name}</div>
         <div class="name-en">${t.nameEn ?? ""}</div>
-        <div class="route">${t.from} → ${t.to}</div>
+        <div class="route">${t.to ? `${t.from} → ${t.to}` : t.from}</div>
         <div class="tags">
           <span class="tag">${t.type}</span>
           <span class="mastery"><span class="dot ${status}"></span>${STATUS_LABELS[status]}</span>
