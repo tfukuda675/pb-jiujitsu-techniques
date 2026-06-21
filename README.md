@@ -58,14 +58,15 @@ python3 -m http.server 8000
 ### イラストを自動生成する
 
 模式図は `tools/generate_illustrations.py` でまとめて作れます。技を増やすときは、スクリプト末尾の `SPEC` に
-`(技ID, [(シーン名, 短いラベル, 矢印など), ...])` を1行足して再実行してください。
+`(技ID, [(シーン名, バリエーション名, 短いラベル), ...])` を1行足して再実行してください。
 
 ```bash
 python3 tools/generate_illustrations.py
 ```
 
-利用できるシーン（ポジション）: `closed_guard` / `mount` / `side` / `back` / `butterfly` /
-`half` / `spider` / `dlr` / `pass` / `triangle` / `armbar`
+現在のシーン名: `closed_guard` / `scissor` / `mount` / `half_guard` / `butterfly` / `spider` /
+`dlr` / `triangle` / `armbar` / `pendulum` / `hip_bump` / `old_school` / `americana` /
+`bow_arrow` / `knee_slice`
 
 ### 技データのテンプレート
 
